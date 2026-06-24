@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* html { scroll-behavior: smooth; } -- resolved conflict with Lenis */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 50% 30%, #F5F9FD 0%, #E3EFFB 35%, #C9DFF6 75%, #B3D2F2 100%);
+  background-attachment: fixed;
+  color: #4A4A4A;
+  overflow-x: hidden;
+  font-family: Inter, sans-serif;
+  zoom: 95%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Cursor styles */
+.custom-cursor-ring {
+  border: 2px solid #14B8A6; /* teal-500 */
+  border-radius: 50%;
+  transition: border-color 0.3s ease;
+}
+
+.custom-cursor-ring.expand {
+  animation: cursor-click 0.5s ease-out forwards;
+}
+
+@keyframes cursor-click {
+  0% {
+    transform: scale(1);
+    border-color: #2DD4BF; /* teal-400 */
+  }
+  50% {
+    transform: scale(2.2);
+    border-color: #0D9488; /* teal-600 */
+    background-color: rgba(20, 184, 166, 0.15);
+  }
+  100% {
+    transform: scale(1);
+    border-color: #14B8A6;
+  }
+}
